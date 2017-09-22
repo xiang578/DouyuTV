@@ -22,7 +22,7 @@ type_re = re.compile(b'type@=(.+?)/')
 
 
 def sendmsg(msgstr):
-    msg = msgstr.encode('utf-8')
+    msg = msgstr.encode('utf8')
     data_length = len(msg) + 8
     code = 689
     msghead = int.to_bytes(data_length, 4, 'little') \
